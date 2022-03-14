@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "be": "apps/be",
+    "be-utils-config": "libs/be/utils-config"
+  }
+}

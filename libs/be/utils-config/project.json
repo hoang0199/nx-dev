@@ -1,0 +1,33 @@
+{
+  "root": "libs/be/utils-config",
+  "sourceRoot": "libs/be/utils-config/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/be/utils-config",
+        "tsConfig": "libs/be/utils-config/tsconfig.lib.json",
+        "packageJson": "libs/be/utils-config/package.json",
+        "main": "libs/be/utils-config/src/index.ts",
+        "assets": ["libs/be/utils-config/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/be/utils-config/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/be/utils-config"],
+      "options": {
+        "jestConfig": "libs/be/utils-config/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:be", "type:lib", "context:config"]
+}
