@@ -1,9 +1,7 @@
 import { Module } from '@nestjs/common';
-
+import { BeFeatureConfigModule } from '@nx-demo/be/feature-config';
 
 @Module({
-  imports: [],
-  controllers: [],
-  providers: [],
+  imports: [BeFeatureConfigModule],
 })
 export class AppModule {}

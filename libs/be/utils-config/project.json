@@ -29,5 +29,5 @@
       }
     }
   },
-  "tags": ["scope:be", "type:lib", "context:config"]
+  "tags": ["scope:be", "type:utils", "context:config"]
 }

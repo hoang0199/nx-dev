@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "be": "apps/be",
+    "be-feature-config": "libs/be/feature-config",
     "be-utils-config": "libs/be/utils-config"
   }
 }

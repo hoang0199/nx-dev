@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-demo/be/feature-config": ["libs/be/feature-config/src/index.ts"],
       "@nx-demo/be/utils-config": ["libs/be/utils-config/src/index.ts"]
     }
   },
