@@ -1,10 +1,17 @@
-import { ConfigType, registerAs } from '@nestjs/config';
-import { Inject } from '@nestjs/common';
+import { DataSource } from 'typeorm';
 
-export const dbConfig = registerAs('db', () => ({
-  url: 'mongodb://localhost:27017/',
-  dbName: 'nx-dev',
-}));
-
-export type DbConfig = ConfigType<typeof dbConfig>;
-export const InjectDbConfig = () => Inject(dbConfig.KEY);
+export const databaseConfig = [
+  {
+    provide: 'DATA_SOURCE',
+    useFactory: async () => {
+      const dataSource = new DataSource({
+        type: 'postgres',
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT, 3306),
+        url: process.env.DB_URL,
+        logging: true,
+      });
+      return dataSource.initialize()
+    }
+  }
+];

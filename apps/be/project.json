@@ -9,20 +9,13 @@
       "options": {
         "outputPath": "dist/apps/be",
         "main": "apps/be/src/main.ts",
-        "tsConfig": "apps/be/tsconfig.app.json",
-        "assets": ["apps/be/src/assets"]
+        "tsConfig": "apps/be/tsconfig.app.json"
       },
       "configurations": {
         "production": {
           "optimization": true,
           "extractLicenses": true,
-          "inspect": false,
-          "fileReplacements": [
-            {
-              "replace": "apps/be/src/environments/environment.ts",
-              "with": "apps/be/src/environments/environment.prod.ts"
-            }
-          ]
+          "inspect": false
         }
       }
     },
