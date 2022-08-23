@@ -7,7 +7,7 @@ import { BeFeatureConfigModule } from '@nx-demo/be/feature-config';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-    })
-    ,BeFeatureConfigModule],
+    }),
+  BeFeatureConfigModule],
 })
 export class AppModule {}

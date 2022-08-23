@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    restart: always
+    volumes:
+      - ./data/postgresql/:/bitnami/postgresql/data
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+      - POSTGRESQL_USERNAME=nx
+      - POSTGRESQL_PASSWORD=123456
+      - POSTGRESQL_DATABASE=nx_database
+      - BITNAMI_DEBUG=true
+    ports:
+      - "5432:5432"
